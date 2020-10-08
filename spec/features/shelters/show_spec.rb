@@ -58,7 +58,7 @@ RSpec.describe "shelter's show page", type: :feature do
     expect(page).not_to have_content(@shelter_2.name)
   end
 
-  it "it can click link 'Update Shelter' and visit that shelter's edit page" do
+  it "can click link 'Update Shelter' and visit that shelter's edit page" do
 
     expect(page).to have_link('Update Shelter')
 
