@@ -10,16 +10,14 @@
 
 - [Introduction](#introduction)
 - [Features](#features)
-- [Schema](#schema)
-- [Testing](#testing)
 - [Contributor](#contributor)
 - [Extra Fun](#extra-fun)
 
 ### Introduction
 
-__Adopt Don't Shop__ was the solo project assigned to the 2008 Back End cohort during Module 2. Students were tasked with creating a...
+__Adopt Don't Shop__ was the solo project assigned to the 2008 Back End cohort during Module 2. Students were tasked with creating an adoption website capable of viewing shelters, pets, and creating new shelters and pets.
 
-The app is deployed to Heroku [here]().
+The app is deployed to Heroku [here](https://young-scrubland-40860.herokuapp.com/).
 
 ### Features
 - Ruby 2.5.3
@@ -35,16 +33,6 @@ The app is deployed to Heroku [here]().
     - [`shoulda-matchers`](https://github.com/thoughtbot/shoulda-matchers): simplifies testing syntax
     - [`factory_bot`](https://github.com/thoughtbot/factory_bot): allows for fixture replacement
     - [`orderly`](https://rubygems.org/gems/orderly/versions/0.0.3): Rspec matcher
-
-### Schema
-
-![adopt_dont_shop_schema]()
-
-### Testing
-
-![Coverage]()
-
-SimpleCov was used to track the test coverage and continue with TDD.
 
 ### Contributor
 
