@@ -46,7 +46,7 @@ RSpec.describe "shelter pets index page" do
                           shelter_id: bernies_beasts.id
                           )
 
-    visit "/shelters/#{dianes_dragons_.id}/pets"
+    visit "/shelters/#{dianes_dragons.id}/pets"
 
     expect(page).to have_content("Name: Damion")
     expect(page).to have_content("Approximate Age: #{damion.approx_age}")
