@@ -40,6 +40,6 @@ RSpec.describe "pets index page", type: :feature do
     expect(page).to have_content("Approximate Age: #{damion.approx_age}")
     expect(page).to have_content("Sex: #{damion.sex}")
     expect(page).to have_content("Approximate Age: #{deirdre.approx_age}")
-    expect(page).to have_content("Shelter: #{bernies_beasts.name}")
+    expect(page).to have_content("Shelter: #{charlie.shelter.name}")
   end
 end
