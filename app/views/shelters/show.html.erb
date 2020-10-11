@@ -6,3 +6,5 @@
 <p><%= @shelter.city %></p>
 <p><%= @shelter.state %></p>
 <p><%= @shelter.zip %></p>
+
+<%= button_to 'Delete Shelter', "/shelters/#{@shelter.id}", method: :delete %>
