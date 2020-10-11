@@ -36,6 +36,10 @@ class SheltersController < ApplicationController
     @pets = @shelter.pets
   end
 
+  def pet_new
+
+  end
+
   private
   def shelter_params
     params.permit(:name,

@@ -8,6 +8,25 @@
 # - approximate age
 # - sex
 
+# User Story 10, Shelter Pet Creation
+#
+# As a visitor
+# When I visit a Shelter Pets Index page
+# Then I see a link to add a new adoptable pet for that shelter "Create Pet"
+# When I click the link
+# I am taken to '/shelters/:shelter_id/pets/new' where I see a form to add a new adoptable pet
+# When I fill in the form with the pet's:
+# - image
+# - name
+# - description
+# - approximate age
+# - sex ('female' or 'male')
+# And I click the button "Create Pet"
+# Then a `POST` request is sent to '/shelters/:shelter_id/pets',
+# a new pet is created for that shelter,
+# that pet has a status of 'adoptable',
+# and I am redirected to the Shelter Pets Index page where I can see the new pet listed
+
 RSpec.describe "shelter pets index page" do
   it "can see each adoptable pet on a specific shelter's pet index page" do
 
@@ -58,5 +77,20 @@ RSpec.describe "shelter pets index page" do
     expect(page).to have_content(deirdre.image)
     expect(page).to_not have_content("Name: Charlie")
     expect(page).to_not have_content("Approximate Age: #{charlie.approx_age}")
+  end
+
+  it "can go to new pet creation page using Create Pet link" do
+    bernies_beasts = Shelter.create(name: "Bernie's Beasts",
+                                    address: "1005 Galapago St",
+                                    city: "Denver",
+                                    state: "CO",
+                                    zip: "80204"
+                                    )
+
+    visit "/shelters/#{bernies_beasts.id}/pets"
+
+    click_link "Create Pet"
+
+    expect(current_path).to  eq("/shelters/#{bernies_beasts.id}/pets/new")
   end
 end
